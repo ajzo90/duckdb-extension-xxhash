@@ -7,7 +7,7 @@ set(GO_EXTENSION_NAME ${TARGET_NAME})
 set(GO_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/go)
 set(BUILD_DIR ${CMAKE_BINARY_DIR}/extension/${TARGET_NAME}/${GO_EXTENSION_NAME}-prefix/src/${GO_EXTENSION_NAME}-build)
 set(LIB ${BUILD_DIR}/${GO_EXTENSION_NAME}.a)
-set(SOURCES src/extension.c)
+set(SOURCES src/extension.cpp)
 
 # Configure extension: the minimum CAPI version where the extension still
 # compiles should be chosen here
