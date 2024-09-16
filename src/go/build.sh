@@ -18,7 +18,6 @@ GOOS=linux
 GOARCH=amd64
 fi
 
-
 CURRENT_DIR=$(pwd)
 SRC_DIR="$1"
 DUCKDB_LIB_PATH=$( cd "$2" && pwd -P )
