@@ -8,7 +8,6 @@ import "C"
 import (
 	"github.com/cespare/xxhash"
 	"github.com/marcboeker/go-duckdb"
-	"github.com/zeebo/xxh3"
 	"unsafe"
 )
 
@@ -23,8 +22,6 @@ func Register(connection C.duckdb_connection, info C.duckdb_extension_info) {
 	conn := duckdb.UpgradeConn((duckdb.Connection)(unsafe.Pointer(connection)))
 
 	Check(duckdb.RegisterScalarUDFConn(conn, "xxhash64", hasher(xxhash.Sum64)))
-	Check(duckdb.RegisterScalarUDFConn(conn, "xxh3", hasher(xxh3.Hash)))
-
 }
 
 func Check(err error) {

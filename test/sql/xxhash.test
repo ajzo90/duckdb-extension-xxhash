@@ -4,7 +4,7 @@
 
 # Before we load the extension, this will fail
 statement error
-SELECT xxhash('Sam');
+SELECT xxhash('XXX');
 ----
 Catalog Error: Scalar Function with name xxhash does not exist!
 
@@ -15,8 +15,3 @@ query I
 SELECT xxhash64('hello');
 ----
 2794345569481354659
-
-query I
-SELECT xxh3('Helloworld');
-----
-13050875471165943247

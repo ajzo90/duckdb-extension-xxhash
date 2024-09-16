@@ -9,8 +9,6 @@ set(BUILD_DIR ${CMAKE_BINARY_DIR}/extension/${TARGET_NAME}/${GO_EXTENSION_NAME}-
 set(LIB ${BUILD_DIR}/${GO_EXTENSION_NAME}.a)
 set(SOURCES src/extension.cpp)
 
-include_directories(src/include)
-
 # Configure extension: the minimum CAPI version where the extension still
 # compiles should be chosen here
 set(CAPI_MAJOR_VERSION 0)

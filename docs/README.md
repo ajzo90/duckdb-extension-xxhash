@@ -1,18 +1,18 @@
-# Example duckdb-plugin-templates for creating plugin for duckdb in Go.
+# DuckDB Extension that adds xxhash functions to DuckDB
 
-## Example
-```
- GEN=ninja make
- 
- ./build/release/duckdb -unsigned 
- 
-```
+Calculates xxHash checksum from a string, from https://github.com/cespare/xxhash
 
 ```
-D load './build/release/extension/xxhash/xxhash.duckdb_extension';
+:) ./build/release/duckdb -unsigned
 
-D select xxhash64('hello world!');
+D load './build/release/extension/quack/quack.duckdb_extension';
 
-D select xxhash3('hello world!');
+D select xxhash64('hello');
+┌─────────────────────┐
+│  xxhash64('hello')  │
+│       uint64        │
+├─────────────────────┤
+│ 2794345569481354659 │
+└─────────────────────┘
 
 ```
