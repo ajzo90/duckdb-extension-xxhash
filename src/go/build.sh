@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-DUCKDB_PLATFORM=osx_amd64
-
 if [ "$DUCKDB_PLATFORM" == "osx_amd64" ]; then
 GOOS=darwin
 GOARCH=amd64
