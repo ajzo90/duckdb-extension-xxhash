@@ -18,7 +18,7 @@ jobs:
     #uses: ./.github/workflows/_extension_distribution.yml
     with:
       duckdb_version: main
-      extension_name: quack
+      extension_name: xxhash
       enable_go: true
       exclude_archs: ;windows_amd64;windows_arm64;windows_amd64_rtools;wasm_eh;wasm_threads;wasm_mvp;
 
