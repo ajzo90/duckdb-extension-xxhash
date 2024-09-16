@@ -1,18 +1,17 @@
-module duckdb/go-extension
+module duckdb-extension/xxhash
 
 go 1.23
 
 replace github.com/marcboeker/go-duckdb v0.0.0 => github.com/ajzo90/go-duckdb v0.0.0-20240915142642-c4c6cc824370
 
 require (
-	github.com/cespare/xxhash/v2 v2.3.0
+	github.com/cespare/xxhash v1.1.0
 	github.com/marcboeker/go-duckdb v0.0.0
 	github.com/zeebo/xxh3 v1.0.2
 )
 
 require (
 	github.com/apache/arrow/go/v15 v15.0.2 // indirect
-	github.com/cespare/xxhash v1.1.0 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/google/flatbuffers v23.5.26+incompatible // indirect
 	github.com/google/uuid v1.3.1 // indirect

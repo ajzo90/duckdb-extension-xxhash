@@ -9,10 +9,10 @@
 ```
 
 ```
-D load './build/release/extension/quack/quack.duckdb_extension';
+D load './build/release/extension/xxhash/xxhash.duckdb_extension';
 
-D select null::go_defined_type;
+D select xxhash64('hello world!');
 
-D select add_numbers_together(1,2);
+D select xxhash3('hello world!');
 
 ```

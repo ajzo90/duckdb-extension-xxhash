@@ -2,15 +2,6 @@
 
 ## Example
 ```
- GEN=ninja make
+ make test
  
- ./build/release/duckdb -unsigned 
- 
-```
-
-```
-D load './build/release/extension/quack/quack.duckdb_extension';
-
-D select null::go_defined_type;
-
 ```

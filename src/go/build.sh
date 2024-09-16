@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+DUCKDB_PLATFORM=osx_amd64
+
 if [ "$DUCKDB_PLATFORM" == "osx_amd64" ]; then
 GOOS=darwin
 GOARCH=amd64
@@ -17,6 +20,7 @@ elif [ "$DUCKDB_PLATFORM" == "linux_amd64" ]; then
 GOOS=linux
 GOARCH=amd64
 fi
+
 
 CURRENT_DIR=$(pwd)
 SRC_DIR="$1"

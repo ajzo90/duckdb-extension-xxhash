@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 2.8.12...3.29)
 
 # Core config
-set(TARGET_NAME quack)
+set(TARGET_NAME xxhash)
 set(LOADABLE_EXTENSION_NAME ${TARGET_NAME}_loadable_extension)
-set(GO_EXTENSION_NAME go-extension)
+set(GO_EXTENSION_NAME ${TARGET_NAME})
 set(GO_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/go)
 set(BUILD_DIR ${CMAKE_BINARY_DIR}/extension/${TARGET_NAME}/${GO_EXTENSION_NAME}-prefix/src/${GO_EXTENSION_NAME}-build)
 set(LIB ${BUILD_DIR}/${GO_EXTENSION_NAME}.a)
-set(SOURCES src/add_numbers.cpp src/capi_demo.cpp)
+set(SOURCES src/extension.cpp)
 
 include_directories(src/include)
 
