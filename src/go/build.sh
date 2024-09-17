@@ -22,4 +22,4 @@ CURRENT_DIR=$(pwd)
 SRC_DIR="$1"
 DUCKDB_LIB_PATH=$( cd "$2" && pwd -P )
 #(cd "$SRC_DIR" && go mod tidy && CC=$CC GOOS=$GOOS GOARCH=$GOARCH CGO_CFLAGS="-I${DUCKDB_LIB_PATH}/" CGO_CFLAGS="-L${DUCKDB_LIB_PATH}/" CGO_ENABLED=1 GOWORK=off go build -x -buildmode=c-archive -o "$CURRENT_DIR" .)
-(cd "$SRC_DIR" && go mod tidy && CC=$CC GOOS=$GOOS GOARCH=$GOARCH CGO_ENABLED=1 GOWORK=off go build -x -buildmode=c-archive -o "$CURRENT_DIR" .)
+(cd "$SRC_DIR" && go mod tidy && CC=$CC GOOS=$GOOS GOARCH=$GOARCH CGO_CFLAGS="-I${DUCKDB_LIB_PATH}/" CGO_ENABLED=1 GOWORK=off go build -x -buildmode=c-archive -o "$CURRENT_DIR" .)
