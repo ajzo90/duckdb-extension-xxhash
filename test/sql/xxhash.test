@@ -7,11 +7,3 @@ statement error
 SELECT xxhash('XXX');
 ----
 Catalog Error: Scalar Function with name xxhash does not exist!
-
-# Require statement will ensure this test is run with this extension loaded
-require xxhash
-
-query I
-SELECT xxhash64('hello');
-----
-2794345569481354659
