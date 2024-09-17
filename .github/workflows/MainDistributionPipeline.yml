@@ -20,6 +20,7 @@ jobs:
       extension_name: xxhash
       exclude_archs: ;windows_amd64;windows_arm64;windows_amd64_rtools;wasm_eh;wasm_threads;wasm_mvp;
       enable_go: true
+      custom_toolchain_script: true
 
   duckdb-stable-build:
     name: Build extension binaries
