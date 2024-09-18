@@ -50,8 +50,8 @@ build_loadable_extension_capi(${TARGET_NAME} ${CAPI_VERSION} ${SOURCES})
 
 target_link_libraries(
   ${LOADABLE_EXTENSION_NAME}
-  duckdb_static
   "${LIB}"
+  duckdb_static
   )
 
 add_dependencies(${LOADABLE_EXTENSION_NAME} ${GO_EXTENSION_NAME})
